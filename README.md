@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Boilerplate
 
-## Getting Started
+A modern starter template for **Next 15 / React 19** projects — equally ready
+for a website _or_ a full‑blown dashboard.
 
-First, run the development server:
+---
+
+## ✨ Key Features
+
+| Area               | What you get                                                                                                   |
+| ------------------ | -------------------------------------------------------------------------------------------------------------- |
+| **Core stack**     | Next 15 • React 19 • TypeScript 5 • Tailwind 4                                                                 |
+| **Design tokens**  | Centralized colors via `@theme` (`primary-*`, `danger-*`, etc.)                                                |
+| **UI library**     | Re‑usable primitives – Button, Card, Modal, Toast, Loader, Skeleton, Inputs, Select, Checkbox, Radio, Textarea |
+| **Data layer**     | React Query 5 + custom provider                                                                                |
+| **Form helpers**   | Controlled inputs, RHF + Zod ready                                                                             |
+| **Modal system**   | Portal, ESC, click‑outside, focus‑trap                                                                         |
+| **Feedback**       | Sonner toasts, Loader / Skeleton components                                                                    |
+| **Testing & lint** | Jest 29 + RTL, ESLint 9, Prettier 3                                                                            |
+| **Path alias**     | `@/…` → `app/…`                                                                                                |
+
+---
+
+## 🚀 Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm i        # install
+npm dev      # run dev server (Turbopack)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🗂️ Project Structure (partial)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+app/
+components/
+  ui/
+    Button.tsx
+    Card.tsx
+    loaders/
+    skeletons/
+    forms/
+providers/
+styles/
+  globals.css
+  theme.css
+lib/
+__tests__/
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Theme Tokens
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```css
+/* styles/theme.css */
+@theme {
+  --color-primary-500: #3b82f6;
+  --color-danger-500: #ef4444;
+  /* … */
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Use them via utilities: `bg-primary-500`, `border-danger-500`, etc.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧩 Sample Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```tsx
+import Button from '@/components/ui/Button'
+import { useModal } from '@/providers/ModalProvider'
+
+function Demo() {
+  const { openModal } = useModal()
+  return (
+    <Button
+      variant='primary'
+      onClick={() => openModal(<p>Hello modal</p>)}
+    >
+      Open modal
+    </Button>
+  )
+}
+```
+
+---
+
+## ⚙️ Scripts
+
+| Command     | Purpose           |
+| ----------- | ----------------- |
+| `npm dev`   | Run dev server    |
+| `npm build` | Production build  |
+| `npm start` | Start prod server |
+| `npm lint`  | ESLint + Prettier |
+| `npm test`  | Jest + RTL        |
+
+---
+
+## 📄 License
+
+MIT © 2025 Ayomide Akintimehin
