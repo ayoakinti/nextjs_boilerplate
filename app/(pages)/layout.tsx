@@ -7,6 +7,7 @@ import { ModalProvider } from '@/providers/ModalProvider'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import { cn } from '@/lib/cn'
+import { ThemeProvider } from '@/providers/ThemeProvider'
 
 const roboto = Roboto({
   subsets: ['latin']
@@ -23,7 +24,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
+    <html
+      lang='en'
+      suppressHydrationWarning
+    >
       <body
         className={cn(
           roboto.className,
@@ -32,12 +36,14 @@ export default function RootLayout({
       >
         <ReactQueryProvider>
           <ModalProvider>
-            <Header />
+            <ThemeProvider>
+              <Header />
 
-            <main className='flex-grow'>{children}</main>
+              <main className='flex-grow'>{children}</main>
 
-            <Footer />
-            <ToastOutlet />
+              <Footer />
+              <ToastOutlet />
+            </ThemeProvider>
           </ModalProvider>
         </ReactQueryProvider>
       </body>

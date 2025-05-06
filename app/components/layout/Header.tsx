@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { cn } from '@/lib/cn'
 import { usePathname } from 'next/navigation'
+import ThemeToggle from '../ui/ThemeToggle'
+import Logo from '../ui/Logo'
 
 interface NavLink {
   href: string
@@ -38,35 +40,32 @@ export default function Header() {
       )}
     >
       <nav className='mx-auto max-w-6xl px-6 py-4 flex items-center justify-between'>
-        {/* Logo */}
-        <Link
-          href='/'
-          className='text-xl font-bold text-primary-600'
-        >
-          MySite
-        </Link>
+        <div className='flex items-center space-x-8'>
+          <Logo className='text-primary-600' />
 
-        {/* Nav Links */}
-        <ul className='flex space-x-6 text-sm'>
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href
-            return (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={cn(
-                    'transition-colors',
-                    isActive
-                      ? 'text-primary-600 font-semibold'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-primary-500'
-                  )}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
+          <ul className='flex space-x-6 text-sm'>
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      'transition-colors',
+                      isActive
+                        ? 'text-primary-600 font-semibold'
+                        : 'text-gray-700 dark:text-gray-300 hover:text-primary-500'
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+
+        <ThemeToggle />
       </nav>
     </header>
   )

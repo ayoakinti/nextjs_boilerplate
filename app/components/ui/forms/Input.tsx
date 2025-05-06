@@ -102,7 +102,7 @@ export default function Input({
   const errorClass = hasError ? '!border-danger-500' : ''
 
   const defaultInputClass =
-    'border rounded-md focus:border-gray-500 outline-none p-2 transition duration-300'
+    'border border-gray-500 rounded-md focus:border-gray-300 outline-none p-2 transition duration-300'
 
   inputClass = `${defaultInputClass} ${errorClass} ${innerLabel ? 'pt-5' : ''} ${inputClass}`
 
