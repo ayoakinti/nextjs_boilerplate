@@ -53,17 +53,17 @@ blog, or component library.
 
   7.**Theming / Design Tokens**
 
-```css
-/* styles/theme.css */
-@theme {
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-danger-500: #ef4444;
-  --color-warning-500: #facc15;
-  /* …etc. */
-}
-@custom-variant dark (&:where(.dark, .dark *));
-```
+  ```css
+  /* styles/theme.css */
+  @theme {
+    --color-primary-500: #3b82f6;
+    --color-primary-600: #2563eb;
+    --color-danger-500: #ef4444;
+    --color-warning-500: #facc15;
+    /* …etc. */
+  }
+  @custom-variant dark (&:where(.dark, .dark *));
+  ```
 
 - Use Tailwind utilities like bg-primary-600, border-danger-500,
   dark:bg-zinc-900, etc.
@@ -73,18 +73,18 @@ blog, or component library.
 - Jest 29 + React Testing Library + ts-jest
 - ESLint 9 + eslint-config-next + Prettier 3
 
-## Getting Started
+## 🚀 Getting Started
 
 ```bash
 # 1. Install dependencies
-pnpm install     # or npm install / yarn
+npm install
 
 # 2. Run development server
-pnpm dev         # Next.js + Turbopack
+npm dev         # Next.js + Turbopack
 
 # 3. Lint & Test
-pnpm lint
-pnpm test
+npm lint
+npm test
 ```
 
 ## 🗂️ Project Structure
