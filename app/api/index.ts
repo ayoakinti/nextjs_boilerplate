@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { APIError } from '../classes/error.class'
+import { APIError } from '@/classes/error.class'
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001',

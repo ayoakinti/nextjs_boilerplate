@@ -1,0 +1,1 @@
+Screenshot of the Next.js Boilerplate demo page showing a modern UI with buttons, form fields, a card with skeleton loaders, and a modal overlay — styled in a light theme with blue primary accents.
