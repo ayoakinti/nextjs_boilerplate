@@ -34,8 +34,7 @@ export default function ThemeToggle() {
         className={cn(
           'bg-transparent text-sm',
           'border border-gray-300 dark:border-zinc-600 rounded p-1',
-          'text-gray-700 dark:text-gray-300',
-          'focus:outline-none focus:ring-1 focus:ring-primary-500'
+          'focus:outline-none focus:ring-1 focus:ring-primary'
         )}
       >
         <option value='light'>Light mode</option>

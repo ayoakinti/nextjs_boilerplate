@@ -44,7 +44,7 @@ export default function Card({
   const cardClasses = cn(
     'rounded-lg bg-white dark:bg-zinc-800 shadow p-4',
     isClickable &&
-      'cursor-pointer transition-shadow duration-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500',
+      'cursor-pointer transition-shadow duration-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
     className
   )
 

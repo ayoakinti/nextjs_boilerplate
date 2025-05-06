@@ -95,14 +95,14 @@ export default function Input({
     }
   }
 
-  labelClass = `${innerLabel ? 'absolute left-2 top-[6px] text-gray-500 text-xs' : ''} ${labelClass}`
+  labelClass = `${innerLabel ? 'absolute left-2 top-[6px] text-muted text-xs' : ''} ${labelClass}`
 
   className = `flex flex-col ${innerLabel ? 'relative' : ''} ${className}`
 
-  const errorClass = hasError ? '!border-danger-500' : ''
+  const errorClass = hasError ? '!border-danger' : ''
 
   const defaultInputClass =
-    'border border-gray-500 rounded-md focus:border-gray-300 outline-none p-2 transition duration-300'
+    'border border-gray-300 rounded-md focus:border-gray-700 dark:border-zinc-700 focus:dark:border-zinc-500 outline-none p-2 transition duration-300'
 
   inputClass = `${defaultInputClass} ${errorClass} ${innerLabel ? 'pt-5' : ''} ${inputClass}`
 
@@ -128,7 +128,7 @@ export default function Input({
           className={inputClass}
         />
         {hasError && errorMessage && (
-          <span className='text-danger-500 text-sm'>{errorMessage}</span>
+          <span className='text-danger text-sm'>{errorMessage}</span>
         )}
       </div>
     </div>

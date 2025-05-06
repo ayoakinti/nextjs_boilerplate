@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={cn(
           roboto.className,
-          'antialiased h-dvh flex flex-col bg-white dark:bg-zinc-900 text-gray-900 dark:text-gray-100'
+          'antialiased h-dvh flex flex-col bg-background text-foreground'
         )}
       >
         <ReactQueryProvider>

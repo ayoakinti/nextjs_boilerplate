@@ -29,10 +29,7 @@ export default function Textarea({
       {label && (
         <label
           htmlFor={textareaId}
-          className={cn(
-            'mb-1 text-sm font-medium text-gray-700 dark:text-gray-300',
-            labelClassName
-          )}
+          className={cn('mb-1 text-sm font-medium', labelClassName)}
         >
           {label}
         </label>
@@ -45,18 +42,17 @@ export default function Textarea({
         rows={rows}
         className={cn(
           'w-full resize-y rounded-md border bg-white dark:bg-zinc-800',
-          'px-3 py-2 text-sm text-black dark:text-white placeholder-gray-400',
+          'px-3 py-2 text-sm placeholder-muted',
           'border-gray-300 dark:border-zinc-600',
-          'focus:ring-1 focus:ring-primary-500 focus:border-primary-500',
-          errorMessage &&
-            'border-danger-500 focus:border-danger-500 focus:ring-danger-500',
+          'focus:ring-1 focus:ring-primary focus:border-primary',
+          errorMessage && 'border-danger focus:border-danger focus:ring-danger',
           textareaClassName
         )}
         {...props}
       />
 
       {errorMessage && (
-        <p className='mt-1 text-sm text-danger-500'>{errorMessage}</p>
+        <p className='mt-1 text-sm text-danger'>{errorMessage}</p>
       )}
     </div>
   )

@@ -42,10 +42,7 @@ export default function SelectInput({
       {label && (
         <label
           htmlFor={computedId}
-          className={cn(
-            'mb-1 text-sm font-medium text-gray-700 dark:text-gray-300',
-            labelClassName
-          )}
+          className={cn('mb-1 text-sm', labelClassName)}
         >
           {label}
         </label>
@@ -57,11 +54,11 @@ export default function SelectInput({
           name={name}
           className={cn(
             'w-full appearance-none rounded-md border bg-white dark:bg-zinc-800',
-            'py-2 pl-2 pr-8 text-sm text-black dark:text-white',
+            'py-2 pl-2 pr-8 text-sm',
             'border-gray-300 dark:border-zinc-600',
-            'focus:ring-1 focus:ring-primary-500 focus:border-primary-500',
+            'focus:ring-1 focus:ring-primary focus:border-primary',
             errorMessage &&
-              'border-danger-500 focus:border-danger-500 focus:ring-danger-500',
+              'border-danger focus:border-danger focus:ring-danger',
             selectClassName
           )}
           {...props}
@@ -88,7 +85,7 @@ export default function SelectInput({
       </div>
 
       {errorMessage && (
-        <p className='mt-1 text-sm text-danger-500'>{errorMessage}</p>
+        <p className='mt-1 text-sm text-danger'>{errorMessage}</p>
       )}
     </div>
   )

@@ -75,7 +75,7 @@ export default function RadioInput({
                       : e.target.value
                   )
                 }
-                className='h-4 w-4 text-primary-600 focus:ring-primary-500'
+                className='h-4 w-4 text-primary focus:ring-primary'
               />
               <span className='text-sm'>{opt.label}</span>
             </label>
@@ -84,7 +84,7 @@ export default function RadioInput({
       </div>
 
       {errorMessage && (
-        <p className='mt-1 text-sm text-danger-500'>{errorMessage}</p>
+        <p className='mt-1 text-sm text-danger'>{errorMessage}</p>
       )}
     </div>
   )

@@ -2,13 +2,7 @@ import Link from 'next/link'
 import { ButtonHTMLAttributes } from 'react'
 import { cn } from '@/lib/cn'
 
-type BtnVariant =
-  | 'primary'
-  | 'secondary'
-  | 'danger'
-  | 'warning'
-  | 'icon-secondary'
-  | 'custom'
+type BtnVariant = 'primary' | 'secondary' | 'danger' | 'warning' | 'custom'
 
 type BtnSize = 'small' | 'medium' | 'large' | 'custom'
 
@@ -29,12 +23,11 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const variants: Record<BtnVariant, string> = {
-    'primary': 'bg-primary-500 hover:bg-primary-700 text-white',
-    'secondary': 'bg-secondary-500 hover:bg-secondary-700 text-white',
-    'danger': 'bg-danger-500 hover:bg-danger-700 text-white',
-    'warning': 'bg-warning-500 hover:bg-warning-700 text-white',
-    'icon-secondary': 'text-secondary-500 hover:text-secondary-700',
-    'custom': ''
+    primary: 'bg-primary hover:bg-primary-700 text-white',
+    secondary: 'bg-secondary hover:bg-secondary-700 text-white',
+    danger: 'bg-danger hover:bg-danger-700 text-white',
+    warning: 'bg-warning hover:bg-warning-700 text-white',
+    custom: ''
   }
 
   const sizes: Record<BtnSize, string> = {

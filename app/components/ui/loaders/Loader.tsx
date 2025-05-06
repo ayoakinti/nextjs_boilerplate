@@ -15,7 +15,7 @@ export default function Loader({
     <div
       role='status'
       className={cn(
-        'animate-spin rounded-full border-2 border-gray-300 border-t-primary-500',
+        'animate-spin rounded-full border-2 border-gray-300 border-t-primary',
         sizeMap[size],
         spinnerClassName
       )}
